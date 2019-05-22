@@ -206,6 +206,7 @@
     <Content Include="Views\Admin\Dashboard.cshtml" />
     <Content Include="Views\Researcher\Dashboard.cshtml" />
     <Content Include="Views\Shared\_ReLayout.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
