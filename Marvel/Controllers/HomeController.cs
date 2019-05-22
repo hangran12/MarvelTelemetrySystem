@@ -26,12 +26,5 @@ namespace Marvel.Controllers
 
             return View();
         }
-
-        public ActionResult ResearcherDashboard()
-        {
-            ViewBag.Message = "The researcher dashboard.";
-
-            return View();
-        }
     }
 }
