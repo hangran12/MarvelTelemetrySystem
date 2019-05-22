@@ -14,7 +14,7 @@ namespace Marvel.Controllers
             return View();
         }
 
-        public ActionResult Table()
+        public ActionResult Tables()
         {
             return View();
         }
@@ -24,9 +24,5 @@ namespace Marvel.Controllers
             return View();
         }
 
-        public ActionResult Feedback()
-        {
-            return View();
-        }
     }
 }

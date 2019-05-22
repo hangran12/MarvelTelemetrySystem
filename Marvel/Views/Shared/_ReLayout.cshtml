@@ -21,9 +21,7 @@
                 <ul class="navbar-nav mr-auto nav-link">
                     <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Report", "Index", "Report", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("FAQ", "FAQ", "Home", null, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Feedback", "Feedback", "Home", null, new { @class = "nav-link" })</li>
                 </ul>
 
                 <form class="form-inline">
@@ -42,7 +40,6 @@
                     <li>@Html.ActionLink("Dashboard", "Dashboard", "Researcher", null, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Table", "Table", "Researcher", null, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Notifications", "Notifications", "Researcher", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Feedback", "Feedback", "Researcher", null, new { @class = "nav-link" })</li>
                 </nav>
             </div>
             @RenderBody()

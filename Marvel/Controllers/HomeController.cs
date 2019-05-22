@@ -20,7 +20,7 @@ namespace Marvel.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Feedback()
         {
             ViewBag.Message = "Your contact page.";
 

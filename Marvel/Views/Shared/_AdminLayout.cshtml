@@ -21,9 +21,7 @@
                 <ul class="navbar-nav mr-auto nav-link">
                     <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Report", "Index", "Report", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("FAQ", "FAQ", "Home", null, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Feedback", "Feedback", "Home", null, new { @class = "nav-link" })</li>
                 </ul>
 
                 <form class="form-inline">
@@ -40,9 +38,8 @@
                 <nav class="nav flex-column">
                     <a class="navbar-link active" href="~/Forms/ControlPanel"><span class="fa fa-home fa-3x ml-3"></span></a>
                     <li>@Html.ActionLink("Dashboard", "Dashboard", "Admin", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Table", "Table", "Admin", null, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Tables", "Tables", "Admin", null, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Notifications", "Notifications", "Admin", null, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Feedback", "Feedback", "Admin", null, new { @class = "nav-link" })</li>
                 </nav>
             </div>
             @RenderBody()
