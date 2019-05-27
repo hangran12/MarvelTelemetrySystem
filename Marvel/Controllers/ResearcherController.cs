@@ -14,7 +14,7 @@ namespace Marvel.Controllers
             return View();
         }
 
-        public ActionResult Tables()
+        public ActionResult Table()
         {
             return View();
         }
