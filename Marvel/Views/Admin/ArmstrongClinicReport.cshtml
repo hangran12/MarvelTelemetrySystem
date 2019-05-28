@@ -1,9 +1,75 @@
-﻿@model Marvel.Armstrong
+﻿@model List<Marvel.Armstrong>
 
 @{
     ViewBag.Title = "ArmstrongClinicReport";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var grid = new WebGrid(canPage: true, rowsPerPage: 10);
+    grid.Bind(source: Model, rowCount: ViewBag.TotalRows, autoSortAndPage: false);
 }
 
-<h2>ArmstrongClinicReport</h2>
 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Tables</h2>
+    <div class="container">
+        <h3>Armstrong Clinic Report</h3>
+        <nav class="navbar navbar-light bg-ligh">
+
+
+
+
+
+            @using (Html.BeginForm("Tables", "Admin", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+            {
+                <div class="form-group">
+                    <input type="text" name="search" id="@ViewBag.search" class="form-control" placeholder="search" />
+                </div>
+                <button type="submit" value="Search" class="btn btn-success">Search</button>
+            }
+
+
+        </nav>
+        <div>
+            @grid.Table(
+            tableStyle: "table table-responsive table-bordered",
+            columns: grid.Columns(
+            grid.Column(columnName:"ClinicName", header:"Clinic Name"),
+            grid.Column(columnName:"UploadPhotos", header:"Upload Photos"),
+            grid.Column(columnName:"VerifiedPhotos", header:"Verified Photos"),
+            grid.Column(columnName:"UploadedThisMonth", header:"Uploaded this month"),
+            grid.Column(columnName:"OverallSuccessRate", header:"Overall Success Rate"),
+            grid.Column(columnName:"ThisMonth", header:"This month")
+            )
+            )
+
+
+            @Html.Hidden("dir", grid.SortDirection)
+            @Html.Hidden("col", grid.SortColumn)
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            try {
+                var dir = $('#dir').val();
+                var col = $('#col').val();
+                var header = $("th a[href*=" + col + "]");
+                if (dir == "Ascending") {
+                    header.text(header.text() + " ▲")
+                }
+                if (dir == "Descending") {
+                    header.text(header.text() + " ▼")
+                }
+            } catch (e) {
+
+            }
+        })
+    </script>
+</body>
+</html>
