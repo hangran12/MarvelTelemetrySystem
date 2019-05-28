@@ -29,5 +29,10 @@ namespace Marvel.Controllers
             return View();
         }
 
+        public ActionResult MarvelousClinicReport()
+        {
+            return View();
+        }
+
     }
 }
