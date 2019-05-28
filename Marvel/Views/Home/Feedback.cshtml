@@ -1,17 +1,18 @@
-﻿@{
+﻿<br />
+@{
     ViewBag.Title = "Feedback";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>@ViewBag.Title</h2>
+<br />
+<select class="browser-default custom-select">
+    <option selected>Please select type of feedback</option>
+    <option value="1">General Feedback</option>
+    <option value="2">Feature Request</option>
+    <option value="3">Report a Bug</option>
+</select>
+<br /><br />
+<div class="form-group">
+    <textarea class="form-control" style="min-width: 75%"></textarea>
+</div>
+<button type="button" class="btn btn-secondary">Submit</button>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
