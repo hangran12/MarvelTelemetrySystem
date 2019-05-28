@@ -126,6 +126,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AmstrongClinicDatabase.mdf" />
+    <Content Include="App_Data\AmstrongClinicDatabase_log.ldf">
+      <DependentUpon>AmstrongClinicDatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -218,7 +222,6 @@
     <Content Include="Views\Researcher\Notifications.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
