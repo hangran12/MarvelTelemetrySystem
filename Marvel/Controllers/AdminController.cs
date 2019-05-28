@@ -37,9 +37,16 @@ namespace Marvel.Controllers
             return View(data);
         }
 
-        public ActionResult MarvelousClinicReport()
+        public ActionResult MarvelousClinicReport(int page = 1, string sort = "SuccessRate", string sortdir = "asc", string search = "")
         {
-            return View();
+            int pageSize = 10;
+            int totalRecord = 0;
+            if (page < 1) page = 1;
+            int skip = (page * pageSize) - pageSize;
+            var data = GetMarvelous(search, sort, sortdir, skip, pageSize, out totalRecord);
+            ViewBag.TotalRows = totalRecord;
+            ViewBag.search = search;
+            return View(data);
         }
 
         public ActionResult ClinicFReport()
