@@ -143,6 +143,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArmstrongModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ClinicF.cs">
+      <DependentUpon>ClinicFModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicFModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicFModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicFModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicFModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicFModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicFModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ResearcherController.cs" />
@@ -175,6 +193,10 @@
     <Content Include="App_Data\ArmstrongCinicDatabase_log.ldf">
       <DependentUpon>ArmstrongCinicDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\ClinicFDatabase.mdf" />
+    <Content Include="App_Data\ClinicFDatabase_log.ldf">
+      <DependentUpon>ClinicFDatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\MarvelousClinicDatabase.mdf" />
     <Content Include="App_Data\MarvelousClinicDatabase_log.ldf">
       <DependentUpon>MarvelousClinicDatabase.mdf</DependentUpon>
@@ -188,6 +210,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ArmstrongModel.edmx</DependentUpon>
       <LastGenOutput>ArmstrongModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="ClinicFModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClinicFModel.edmx</DependentUpon>
+      <LastGenOutput>ClinicFModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ClinicFModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClinicFModel.edmx</DependentUpon>
+      <LastGenOutput>ClinicFModel.cs</LastGenOutput>
     </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -249,6 +281,13 @@
     </EntityDeploy>
     <Content Include="MarvelousModel.edmx.diagram">
       <DependentUpon>MarvelousModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="ClinicFModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClinicFModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="ClinicFModel.edmx.diagram">
+      <DependentUpon>ClinicFModel.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\MarveTelemetrySystem - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
