@@ -92,5 +92,24 @@ namespace Marvel.Controllers
             }
         }
 
+        public List<ClinicF> GetClinicF(string search, string sort, string sortdir, int skip, int pageSize, out int totalRecord)
+        {
+            using (ClinicFDatabaseEntities dc = new ClinicFDatabaseEntities())
+            {
+                var v = (from a in dc.ClinicFs
+                         where
+                                 a.SuccessRate.Contains(search)
+                         select a
+                         );
+                totalRecord = v.Count();
+                v = v.OrderBy(sort + " " + sortdir);
+                if (pageSize > 0)
+                {
+                    v = v.Skip(skip).Take(pageSize);
+                }
+                return v.ToList();
+            }
+        }
+
     }
 }
