@@ -4,5 +4,47 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Clinic Report</h2>
+
+<h2>Overall Clinic Report</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Clinic Name</th>
+            <th>Upload Photos</th>
+            <th>Verified Photos</th>
+            <th>Uploaded This Month</th>
+            <th>Overall Success Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="/Researcher/Dashboard">Armstrong Clinic</a></td>
+            <td>116</td>
+            <td>102</td>
+            <td>11</td>
+            <td>88%</td>
+            <td>73%</td>
+        </tr>
+        <tr>
+            <td><a href="/Researcher/Dashboard">Marvelous Clinic</a></td>
+            <td>103</td>
+            <td>102</td>
+            <td>0</td>
+            <td>99%</td>
+            <td>Error</td>
+        </tr>
+        <tr>
+            <td><a href="/Researcher/Dashboard">Clinic F</a></td>
+            <td>125</td>
+            <td>86</td>
+            <td>11</td>
+            <td>69%</td>
+            <td>0%</td>
+        </tr>
+    </tbody>
+ </table>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
