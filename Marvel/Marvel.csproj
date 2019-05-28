@@ -158,8 +158,8 @@
     </Content>
     <Content Include="ArmstrongModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ArmstrongModel.Context.cs</LastGenOutput>
       <DependentUpon>ArmstrongModel.edmx</DependentUpon>
+      <LastGenOutput>ArmstrongModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="ArmstrongModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

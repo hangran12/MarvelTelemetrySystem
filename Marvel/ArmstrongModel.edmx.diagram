@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="74e0f9fc69f041c284b3b6ebcfc8d8da" Name="Diagram1">
+      <Diagram DiagramId="8da40511e1cb49be9d06f19ea845c751" Name="Diagram1">
         <EntityTypeShape EntityType="ArmstrongCinicDatabaseModel.Armstrong" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

@@ -13,10 +13,10 @@ namespace Marvel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ArmstrongCinicDatabaseEntities : DbContext
+    public partial class ArmstrongCinicDatabaseEntities2 : DbContext
     {
-        public ArmstrongCinicDatabaseEntities()
-            : base("name=ArmstrongCinicDatabaseEntities")
+        public ArmstrongCinicDatabaseEntities2()
+            : base("name=ArmstrongCinicDatabaseEntities2")
         {
         }
     

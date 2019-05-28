@@ -31,7 +31,7 @@
           <Property Name="Verified" Type="Int32" />
           <Property Name="SuccessRate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="ArmstrongCinicDatabaseEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ArmstrongCinicDatabaseEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Armstrongs" EntityType="Self.Armstrong" />
         </EntityContainer>
       </Schema>
@@ -39,7 +39,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ArmstrongCinicDatabaseModelStoreContainer" CdmEntityContainer="ArmstrongCinicDatabaseEntities">
+        <EntityContainerMapping StorageEntityContainer="ArmstrongCinicDatabaseModelStoreContainer" CdmEntityContainer="ArmstrongCinicDatabaseEntities2">
           <EntitySetMapping Name="Armstrongs">
             <EntityTypeMapping TypeName="ArmstrongCinicDatabaseModel.Armstrong">
               <MappingFragment StoreEntitySet="Armstrong">
