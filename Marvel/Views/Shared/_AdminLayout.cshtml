@@ -34,27 +34,30 @@
     </div>
 
     <div class="container body-content">
-        <div class="row h-100">
+        <div class="row">
             <div class="col-2 collapse d-md-flex pt-2 h-100" id="sidebar">
                 <nav class="nav flex-column">
                     <a class="navbar-link active" href="~/Forms/ControlPanel"><span class="fa fa-home fa-3x ml-3"></span></a>
                     <li>@Html.ActionLink(" Dashboard", "Dashboard", "Admin", null, new { @class = "nav-link" })</button></li>
                     <li>@Html.ActionLink("Notifications", "Notifications", "Admin", null, new { @class = "nav-link" })</li>
                     <li>
-                    <center><div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            Tables
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item">@Html.ActionLink("Clinic Report", "Table", "Admin", null, new { @class = "nav-link" })</a>
-                            <a class="dropdown-item" href="#">Budgeting Report</a>
-                            <a class="dropdown-item" href="#">Performance Report</a>
-                        </div>
-                    </div></center></li>
+                        <center>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Tables
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item">@Html.ActionLink("Clinic Report", "Table", "Admin", null, new { @class = "nav-link" })</a>
+                                    <a class="dropdown-item" href="#">Budgeting Report</a>
+                                    <a class="dropdown-item" href="#">Performance Report</a>
+                                </div>
+                            </div>
+                        </center>
+                    </li>
                 </nav>
             </div>
+            <div class="col-10">
             @RenderBody()
-            <div class="col pt-2" id="wLayout">
             </div>
         </div>
         <hr />
