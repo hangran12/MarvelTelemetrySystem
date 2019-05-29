@@ -15,28 +15,33 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <h2>Tables</h2>
+    <h3>Armstrong Clinic Report</h3>
     <div class="container">
-        <h3>Armstrong Clinic Report</h3>
-        <nav class="navbar navbar-light bg-ligh">
-
-
-
-
-
-            @using (Html.BeginForm("ArmstrongClinicReport", "Admin", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
-            {
-                <div class="form-group">
-                    <input type="text" name="search" id="@ViewBag.search" class="form-control" placeholder="search" />
+        @using (Html.BeginForm())
+        {
+            <div class="row justify-content-end">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-0" id="@ViewBag.search" type="text" name="search" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+                </form>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-success my-2 my-sm-0">Share</button>
+                    <button type="button" class="btn btn-outline-success my-2 my-sm-0">Export</button>
                 </div>
-                <button type="submit" value="Search" class="btn btn-success">Search</button>
-            }
+            </div>
 
 
-        </nav>
+        }
+        <div class="row">
+            <h1></h1>
+        </div>
+        <div class="row">
+            <h1></h1>
+        </div>
+
         <div>
             @grid.Table(
-            tableStyle: "table table-responsive table-bordered",
+            tableStyle: "table",
             columns: grid.Columns(
             grid.Column(columnName:"Month", header:"Month"),
             grid.Column(columnName:"Uploaded", header:"Uploaded"),
@@ -50,23 +55,27 @@
             @Html.Hidden("col", grid.SortColumn)
         </div>
     </div>
+    
 
-     <div class="row">
-         <div class="col">
-             <div class="form-row text-center">
-                 <div class="col">
-                     <img src="~/Content/img/Armstrong.png" width="550" height="300" alt=""/>
-                 </div>
-             </div>
-         </div>
-         <div class="col">
-             <div class="form-row text-center">
-                 <div class="col">
-                     <img src="~/Content/img/ArmstrongSR.png" width="550" height="300" alt=""/>
-                 </div>
-             </div>
-         </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="form-row text-center">
+                <div class="col">
+                    <img src="~/Content/img/Armstrong.png" width="550" height="300" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-row text-center">
+                <div class="col">
+                    <img src="~/Content/img/ArmstrongSR.png" width="550" height="300" alt="" />
+                </div>
+            </div>
+        </div>
     </div>
+
+    <a href="/Admin/Table"><p class="text-sm-left">← Back to the Overall view of Clinic Report.</p></a>
 
     <script src="~/Scripts/jquery-3.4.1.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>

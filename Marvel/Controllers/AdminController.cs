@@ -27,7 +27,7 @@ namespace Marvel.Controllers
 
         public ActionResult ArmstrongClinicReport(int page = 1, string sort = "SuccessRate", string sortdir = "asc", string search = "")
         {
-            int pageSize = 10;
+            int pageSize = 100;
             int totalRecord = 0;
             if (page < 1) page = 1;
             int skip = (page * pageSize) - pageSize;
@@ -39,7 +39,7 @@ namespace Marvel.Controllers
 
         public ActionResult MarvelousClinicReport(int page = 1, string sort = "SuccessRate", string sortdir = "asc", string search = "")
         {
-            int pageSize = 10;
+            int pageSize = 100;
             int totalRecord = 0;
             if (page < 1) page = 1;
             int skip = (page * pageSize) - pageSize;
@@ -51,7 +51,7 @@ namespace Marvel.Controllers
 
         public ActionResult ClinicFReport(int page = 1, string sort = "SuccessRate", string sortdir = "asc", string search = "")
         {
-            int pageSize = 10;
+            int pageSize = 100;
             int totalRecord = 0;
             if (page < 1) page = 1;
             int skip = (page * pageSize) - pageSize;
