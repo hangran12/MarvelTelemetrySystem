@@ -28,5 +28,11 @@ namespace Marvel.Controllers
         {
             return View();
         }
+
+
+        public ActionResult Population()
+        {
+            return View();
+        }
     }
 }

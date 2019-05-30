@@ -356,6 +356,8 @@
     <Content Include="Views\Admin\ArmstrongClinicReport.cshtml" />
     <Content Include="Views\Admin\MarvelousClinicReport.cshtml" />
     <Content Include="Views\Admin\ClinicFReport.cshtml" />
+    <Content Include="Views\Admin\Budget.cshtml" />
+    <Content Include="Views\Researcher\Population.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
