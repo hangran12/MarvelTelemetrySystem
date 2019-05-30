@@ -30,6 +30,7 @@ namespace Marvel.Controllers
             return View();
         }
 
+
         public ActionResult ArmstrongClinicReport(int page = 1, string sort = "SuccessRate", string sortdir = "asc", string search = "")
         {
             int pageSize = 100;
