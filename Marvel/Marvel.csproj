@@ -180,8 +180,7 @@
     <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="Fake_data\BudgetReport.pbix" />
     <Content Include="Fake_data\UploadSuccess.pbix" />
-    <None Include="Properties\PublishProfiles\MarvelousTelemetry - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\MarvelTelemetry - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\MarvelSystem - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\MarveTelemetrySystem - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
