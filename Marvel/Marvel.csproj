@@ -125,102 +125,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Armstrong.cs">
-      <DependentUpon>ArmstrongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ArmstrongModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ArmstrongModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ArmstrongModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ArmstrongModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ArmstrongModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ArmstrongModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicF.cs">
-      <DependentUpon>ClinicFModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicFModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClinicFModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicFModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClinicFModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicFModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClinicFModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ResearcherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Marvelou.cs">
-      <DependentUpon>MarvelousModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MarvelousModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MarvelousModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MarvelousModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MarvelousModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MarvelousModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MarvelousModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebGridExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ArmstrongCinicDatabase.mdf" />
-    <Content Include="App_Data\ArmstrongCinicDatabase_log.ldf">
-      <DependentUpon>ArmstrongCinicDatabase.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\ClinicFDatabase.mdf" />
-    <Content Include="App_Data\ClinicFDatabase_log.ldf">
-      <DependentUpon>ClinicFDatabase.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\MarvelousClinicDatabase.mdf" />
-    <Content Include="App_Data\MarvelousClinicDatabase_log.ldf">
-      <DependentUpon>MarvelousClinicDatabase.mdf</DependentUpon>
-    </Content>
-    <Content Include="ArmstrongModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ArmstrongModel.edmx</DependentUpon>
-      <LastGenOutput>ArmstrongModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ArmstrongModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ArmstrongModel.edmx</DependentUpon>
-      <LastGenOutput>ArmstrongModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="ClinicFModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClinicFModel.edmx</DependentUpon>
-      <LastGenOutput>ClinicFModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ClinicFModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ClinicFModel.edmx</DependentUpon>
-      <LastGenOutput>ClinicFModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -249,16 +162,6 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="MarvelousModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MarvelousModel.edmx</DependentUpon>
-      <LastGenOutput>MarvelousModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="MarvelousModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MarvelousModel.edmx</DependentUpon>
-      <LastGenOutput>MarvelousModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -275,27 +178,6 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
-    <EntityDeploy Include="ArmstrongModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ArmstrongModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ArmstrongModel.edmx.diagram">
-      <DependentUpon>ArmstrongModel.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="MarvelousModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MarvelousModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="MarvelousModel.edmx.diagram">
-      <DependentUpon>MarvelousModel.edmx</DependentUpon>
-    </Content>
-    <EntityDeploy Include="ClinicFModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ClinicFModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ClinicFModel.edmx.diagram">
-      <DependentUpon>ClinicFModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Fake_data\BudgetReport.pbix" />
     <Content Include="Fake_data\UploadSuccess.pbix" />
     <None Include="Properties\PublishProfiles\MarvelousTelemetry - Web Deploy.pubxml" />
@@ -361,6 +243,7 @@
     <Content Include="Views\Researcher\ArmstrongClinicReport2.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
