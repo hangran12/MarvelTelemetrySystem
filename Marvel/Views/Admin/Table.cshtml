@@ -57,7 +57,47 @@
                 }
             });
         });
+
+    window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer1");
+
+    chart.options.axisY = { prefix: "", suffix: "%" };
+    chart.options.title = { text: "Overall Clinic Report" };
+
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Overall Success Rate",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Success Rate This Month",
+        showInLegend: true
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+
+
+    series1.dataPoints = [
+        { label: "Armstrong Clinic", y: 88 },
+        { label: "Marvelous Clinic", y: 99 },
+        { label: "Clinic F", y: 69 }
+    ];
+
+    series2.dataPoints = [
+        { label: "Armstrong Clinic", y: 73 },
+        { label: "Marvelous Clinic", y: 0 },
+        { label: "Clinic F", y: 0 }
+    ];
+        chart.render();
+      
+        }
+
     </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 <body>
     <h2>Overall Clinic Report</h2>
@@ -120,10 +160,10 @@
                 </tbody>
             </table>
         </div>
-
-        <div class="container">
-            <img src="~/Content/img/OverallClinic.png" alt="" class="mx-auto d-block" />
-        </div>
+    </div>
+    <div class="container">
+        <div id="chartContainer1" style="height: 400px; width:100%;"></div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Sortable-Bootstrap-Tables-Bootstrap-Sortable/Scripts/bootstrap-sortable.js"></script>
