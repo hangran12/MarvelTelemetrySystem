@@ -59,7 +59,101 @@
                 }
             });
         });
+
+        window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer1");
+
+    chart.options.axisY = { prefix: "", suffix: "" };
+    chart.options.title = { text: "Armstrong Clinic Report" };
+
+    var series1 = { //dataSeries - first quarter
+        type: "column",
+        name: "Uploaded",
+        showInLegend: true
+    };
+
+    var series2 = { //dataSeries - second quarter
+        type: "column",
+        name: "Verified",
+        showInLegend: true
+    };
+
+    chart.options.data = [];
+    chart.options.data.push(series1);
+    chart.options.data.push(series2);
+
+
+    series1.dataPoints = [
+        { label: "06-01-2018", y: 10 },
+        { label: "07-01-2018", y: 12 },
+        { label: "08-01-2018", y: 15 },
+        { label: "09-01-2018", y: 14 },
+        { label: "10-01-2018", y: 11 },
+        { label: "11-01-2018", y: 2 },
+        { label: "12-01-2018", y: 15 },
+        { label: "01-01-2019", y: 8 },
+        { label: "02-01-2019", y: 6 },
+        { label: "03-01-2019", y: 4 },
+        { label: "04-01-2019", y: 8 },
+        { label: "05-01-2019", y: 11 }
+
+    ];
+
+    series2.dataPoints = [
+        { label: "06-01-2018", y: 9 },
+        { label: "07-01-2018", y: 11 },
+        { label: "08-01-2018", y: 14 },
+        { label: "09-01-2018", y: 13 },
+        { label: "10-01-2018", y: 10 },
+        { label: "11-01-2018", y: 1 },
+        { label: "12-01-2018", y: 14 },
+        { label: "01-01-2019", y: 7 },
+        { label: "02-01-2019", y: 5 },
+        { label: "03-01-2019", y: 3 },
+        { label: "04-01-2019", y: 7 },
+        { label: "05-01-2019", y: 8 }
+    ];
+
+            chart.render();
+            var chart = new CanvasJS.Chart("chartContainer2",
+                {
+                    title: {
+                        text: "Success Rate in past 12 months"
+                    },
+                    axisX: {
+                        title: "timeline",
+                        gridThickness: 2
+                    },
+                    axisY: {
+                        title: "%"
+                    },
+                    data: [
+                        {
+                            type: "area",
+                            dataPoints: [//array
+                                { x: new Date(2018, 06, 1), y: 90 },
+                                { x: new Date(2018, 07, 1), y: 92 },
+                                { x: new Date(2018, 08, 1), y: 93 },
+                                { x: new Date(2018, 09, 1), y: 93 },
+                                { x: new Date(2018, 10, 1), y: 91 },
+                                { x: new Date(2018, 11, 1), y: 50 },
+                                { x: new Date(2018, 12, 1), y: 93 },
+                                { x: new Date(2019, 01, 1), y: 88 },
+                                { x: new Date(2019, 02, 1), y: 83 },
+                                { x: new Date(2019, 03, 1), y: 75 },
+                                { x: new Date(2019, 04, 1), y: 88 },
+                                { x: new Date(2019, 05, 1), y: 73 }
+
+                            ]
+                        }
+                    ]
+                });
+
+            chart.render();
+        }
+
     </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 <body>
     <h2>Armstrong Clinic Report</h2>
@@ -81,7 +175,7 @@
         <div class="row">
             <p></p>
         </div>
- 
+
         <div class="row">
             <table class="table table-bordered table-striped sortable table-list-search">
                 <thead>
@@ -177,22 +271,20 @@
             </table>
         </div>
 
-        <div class="row">
-            <div class="col">
-                <div class="form-row text-center">
-                    <div class="col">
-                        <img src="~/Content/img/Armstrong.png" width="400" height="250" alt="" />
-                    </div>
-                </div>
+        <div class="container">
+            <div id="chartContainer1" style="height: 400px; width:100%;">
             </div>
-            <div class="col">
-                <div class="form-row text-center">
-                    <div class="col">
-                        <img src="~/Content/img/ArmstrongSR.png" width="400" height="250" alt="" />
-                    </div>
-                </div>
+
+            <div class="row">
+                <h1></h1>
+            </div>
+
+            <div id="chartContainer2" style="height: 400px; width: 100%;">
             </div>
         </div>
+            
+
+        
 
         <a href="/Admin/Table"><p class="text-sm-left">← Back to the Overall view of Clinic Report.</p></a>
     </div>
