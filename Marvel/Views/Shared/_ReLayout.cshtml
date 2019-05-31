@@ -33,28 +33,31 @@
     </div>
 
     <div class="container body-content">
-        <div class="row h-100">
+        <div class="row">
             <div class="col-2 collapse d-md-flex pt-2 h-100" id="sidebar">
                 <nav class="nav flex-column">
                     <a class="navbar-link active" href="~/Forms/ControlPanel"><span class="fa fa-home fa-3x ml-3"></span></a>
                     <li>@Html.ActionLink("Dashboard", "Dashboard", "Researcher", null, new { @class = "nav-link" })</li>
                     </li>
                     <li>@Html.ActionLink("Notifications", "Notifications", "Researcher", null, new { @class = "nav-link" })</li>
-                    <li><center>
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            Tables
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item">@Html.ActionLink("Photo Information", "Table", "Researcher", null, new { @class = "nav-link" })</a>
-                            <a class="dropdown-item" href="#">Performance Report</a>
-                            <a class="dropdown-item" href="#">Geographical Report</a>
-                        </div>
-                    </div></center></li>
+                    <li>
+                        <center>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Tables
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item">@Html.ActionLink("Photo Information", "Table", "Researcher", null, new { @class = "nav-link" })</a>
+                                    <a class="dropdown-item" href="#">Performance Report</a>
+                                    <a class="dropdown-item" href="#">Geographical Report</a>
+                                </div>
+                            </div>
+                        </center>
+                    </li>
                 </nav>
             </div>
-            @RenderBody()
-            <div class="col pt-2" id="wLayout">
+            <div class="col-10">
+                @RenderBody()
             </div>
         </div>
         <hr />
