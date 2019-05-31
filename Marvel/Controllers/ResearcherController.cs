@@ -34,5 +34,10 @@ namespace Marvel.Controllers
         {
             return View();
         }
+
+        public ActionResult ArmstrongClinicReport2()
+        {
+            return View();
+        }
     }
 }
