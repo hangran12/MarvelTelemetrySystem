@@ -59,41 +59,73 @@
         });
 
     window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer1");
 
-    chart.options.axisY = { prefix: "", suffix: "%" };
-    chart.options.title = { text: "Overall Clinic Report" };
-
-    var series1 = { //dataSeries - first quarter
-        type: "column",
+    var chart = new CanvasJS.Chart("chartContainer1", {
+	exportEnabled: true,
+	animationEnabled: true,
+	title:{
+		text: "Overall Clinic Report"
+	},
+	axisX: {
+		title: "Clinics"
+	},
+	axisY: {
+		title: "Overall Success Rate - %",
+		titleFontColor: "#4F81BC",
+		lineColor: "#4F81BC",
+		labelFontColor: "#4F81BC",
+		tickColor: "#4F81BC"
+	},
+	axisY2: {
+		title: "Success Rate This Month - %",
+		titleFontColor: "#C0504E",
+		lineColor: "#C0504E",
+		labelFontColor: "#C0504E",
+		tickColor: "#C0504E"
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "column",
         name: "Overall Success Rate",
-        showInLegend: true
-    };
+		showInLegend: true,
+		yValueFormatString: "#,##0.# '%'",
+		dataPoints: [
+            { label: "Armstrong Clinic", y: 88 },
+            { label: "Marvelous Clinic", y: 99 },
+            { label: "Clinic F", y: 69 }
+		]
+	},
+	{
+		type: "column",
+		name: "Success Rate This Month",
+		axisYType: "secondary",
+		showInLegend: true,
+		yValueFormatString: "#,##0.# '%'",
+		dataPoints: [
+            { label: "Armstrong Clinic", y: 73 },
+            { label: "Marvelous Clinic", y: 0 },
+            { label: "Clinic F", y: 0 }
+		]
+            }]
+        });
 
-    var series2 = { //dataSeries - second quarter
-        type: "column",
-        name: "Success Rate This Month",
-        showInLegend: true
-    };
-
-    chart.options.data = [];
-    chart.options.data.push(series1);
-    chart.options.data.push(series2);
-
-
-    series1.dataPoints = [
-        { label: "Armstrong Clinic", y: 88 },
-        { label: "Marvelous Clinic", y: 99 },
-        { label: "Clinic F", y: 69 }
-    ];
-
-    series2.dataPoints = [
-        { label: "Armstrong Clinic", y: 73 },
-        { label: "Marvelous Clinic", y: 0 },
-        { label: "Clinic F", y: 0 }
-    ];
         chart.render();
-      
+
+        function toggleDataSeries(e) {
+            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+            } else {
+                e.dataSeries.visible = true;
+            }
+            e.chart.render();
+        }
+
         }
 
     </script>
@@ -165,8 +197,10 @@
         <div id="chartContainer1" style="height: 400px; width:100%;"></div>
     </div>
 
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Sortable-Bootstrap-Tables-Bootstrap-Sortable/Scripts/bootstrap-sortable.js"></script>
 </body>
 </html>
+
 
