@@ -187,6 +187,7 @@
     <Content Include="Content\file\MarvelousClinicReport.xlsx" />
     <Content Include="Content\file\BudgetReport.xlsx" />
     <None Include="Properties\PublishProfiles\MarvelSystem - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\MarvelTelemetry - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\MarveTelemetrySystem - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -236,9 +237,9 @@
     <Content Include="Views\Researcher\Dashboard.cshtml" />
     <Content Include="Views\Shared\_ReLayout.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\Admin\Table.cshtml" />
+    <Content Include="Views\Admin\OverallClinicReport.cshtml" />
     <Content Include="Views\Admin\Notifications.cshtml" />
-    <Content Include="Views\Researcher\Table.cshtml" />
+    <Content Include="Views\Researcher\PhotoReport.cshtml" />
     <Content Include="Views\Researcher\Notifications.cshtml" />
     <Content Include="Views\Admin\ArmstrongClinicReport.cshtml" />
     <Content Include="Views\Admin\MarvelousClinicReport.cshtml" />
