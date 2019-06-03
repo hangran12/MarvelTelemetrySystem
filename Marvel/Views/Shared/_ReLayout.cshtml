@@ -31,20 +31,26 @@
         <div class="row">
             <div class="col-2 collapse d-md-flex pt-2 h-100" id="sidebar">
                 <nav class="nav flex-column">
+                    <center><img src="~/Content/img/iconAdmin.png" alt="" height="70" width="70" />
+                    <br /><br />
+                    <a class="btn btn-outline-primary btn-sm btn" href="/Admin/Dashboard" role="button">ADMINISTRATOR</a></center>
                     <a class="navbar-link active" href="~/Forms/ControlPanel"><span class="fa fa-home fa-3x ml-3"></span></a>
                     <li>@Html.ActionLink("Dashboard", "Dashboard", "Researcher", null, new { @class = "nav-link" })</li>
                     </li>
                     <li>@Html.ActionLink("Notifications", "Notifications", "Researcher", null, new { @class = "nav-link" })</li>
-                    <li><center>
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            Tables
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item">@Html.ActionLink("Photo Information", "Table", "Researcher", null, new { @class = "nav-link" })</a>
-                            <a class="dropdown-item">@Html.ActionLink("Population Map", "Population", "Researcher", null, new { @class = "nav-link" })</a>
-                        </div>
-                    </div></center></li>
+                    <li>
+                        <center>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Tables
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item">@Html.ActionLink("Photo Information", "Table", "Researcher", null, new { @class = "nav-link" })</a>
+                                    <a class="dropdown-item">@Html.ActionLink("Population Map", "Population", "Researcher", null, new { @class = "nav-link" })</a>
+                                </div>
+                            </div>
+                        </center>
+                    </li>
                 </nav>
             </div>
             <div class="col-10">
