@@ -143,6 +143,7 @@
     <Content Include="Content\img\Armstrong.PNG" />
     <Content Include="Content\img\ArmstrongSR.PNG" />
     <Content Include="Content\img\background.png" />
+    <Content Include="Content\img\budget.PNG" />
     <Content Include="Content\img\ClinicF.PNG" />
     <Content Include="Content\img\ClinicFSR.PNG" />
     <Content Include="Content\img\iconAdmin.png" />
