@@ -181,6 +181,9 @@
     <Content Include="Fake_data\BudgetReport.pbix" />
     <Content Include="Fake_data\UploadSuccess.pbix" />
     <Content Include="Content\file\OverallClinicReport.xlsx" />
+    <Content Include="Content\file\ArmstrongClinicReport.xlsx" />
+    <Content Include="Content\file\ClinicFReport.xlsx" />
+    <Content Include="Content\file\MarvelousClinicReport.xlsx" />
     <None Include="Properties\PublishProfiles\MarvelSystem - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\MarveTelemetrySystem - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
