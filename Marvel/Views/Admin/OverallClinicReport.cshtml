@@ -12,7 +12,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link href="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Sortable-Bootstrap-Tables-Bootstrap-Sortable/Contents/bootstrap-sortable.css" rel="stylesheet" type="text/css">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
@@ -129,7 +128,6 @@
         }
 
     </script>
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 <body>
     <h2>Overall Clinic Report</h2>
@@ -140,14 +138,14 @@
                 <div class="input-group">
                     <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
                     <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
-                    </span>
                 </div>
 
             </form>
             <div class="col-auto"><p></p></div>
             <div class="btn-group">
+                <a href="~/Admin/OverallClinicReport" class="btn btn-info" role="button">
+                    Clear Filter
+                </a>
                 <a href="~/Content/file/OverallClinicReport.xlsx" download class="btn btn-info" role="button">
                     Download
                 </a>

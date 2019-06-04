@@ -12,7 +12,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link href="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Sortable-Bootstrap-Tables-Bootstrap-Sortable/Contents/bootstrap-sortable.css" rel="stylesheet" type="text/css">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
@@ -58,50 +57,7 @@
             });
         });
 
-        window.onload = function () {
-
-            var chart = new CanvasJS.Chart("chartContainer1", {
-                exportEnabled: true,
-                animationEnabled: true,
-                title: {
-                    text: "Clinic F - Photo status this month",
-                    horizontalAlign: "left"
-                },
-                data: [{
-                    type: "doughnut",
-                    startAngle: 60,
-                    //innerRadius: 60,
-                    indexLabelFontSize: 17,
-                    indexLabel: "{label} - #percent%",
-                    toolTipContent: "<b>{label}:</b> {y} (#percent%)",
-                    dataPoints: [
-                        { y: 100, label: "Failure" }
-                    ]
-                }]
-            });
-
-            var chart = new CanvasJS.Chart("chartContainer2", {
-                exportEnabled: true,
-                animationEnabled: true,
-                title: {
-                    text: "Armstrong Clinic - Photo status this month",
-                    horizontalAlign: "left"
-                },
-                data: [{
-                    type: "doughnut",
-                    startAngle: 60,
-                    //innerRadius: 60,
-                    indexLabelFontSize: 17,
-                    indexLabel: "{label} - #percent%",
-                    toolTipContent: "<b>{label}:</b> {y} (#percent%)",
-                    dataPoints: [
-                        { y: 73, label: "Success" }
-                        { y: 27, label: "Failure" }
-                    ]
-                }]
-            });
-            chart.render();
-        }
+        
     </script>
 </head>
 <body>
@@ -113,15 +69,15 @@
                 <div class="input-group">
                     <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
                     <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
-                    </span>
                 </div>
 
             </form>
             <div class="col-auto"><p></p></div>
             <div class="btn-group">
-                <a href="~/Content/file/OverallClinicReport.xlsx" download class="btn btn-info" role="button">
+                <a href="~/Researcher/PhotoReport" class="btn btn-info" role="button">
+                    Clear Filter
+                </a>
+                <a href="~/Content/file/PhotoReport.xlsx" download class="btn btn-info" role="button">
                     Download
                 </a>
             </div>
@@ -146,7 +102,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0928</a></td>
+                        <td><a href="#modal1" class="trigger-btn" data-toggle="modal">CF-0928</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-01-2019</td>
@@ -156,7 +112,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0929</a></td>
+                        <td><a href="#modal2" class="trigger-btn" data-toggle="modal">CF-0929</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-01-2019</td>
@@ -166,7 +122,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0930</a></td>
+                        <td><a href="#modal3" class="trigger-btn" data-toggle="modal">CF-0930</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-03-2019</td>
@@ -176,7 +132,7 @@
                         <td>OFF</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0931</a></td>
+                        <td><a href="#modal4" class="trigger-btn" data-toggle="modal">CF-0931</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-04-2019</td>
@@ -186,7 +142,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0932</a></td>
+                        <td><a href="#modal5" class="trigger-btn" data-toggle="modal">CF-0932</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-10-2019</td>
@@ -196,7 +152,7 @@
                         <td>OFF</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0933</a></td>
+                        <td><a href="#modal6" class="trigger-btn" data-toggle="modal">CF-0933</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-15-2019</td>
@@ -206,7 +162,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0934</a></td>
+                        <td><a href="#modal7" class="trigger-btn" data-toggle="modal">CF-0934</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-20-2019</td>
@@ -216,7 +172,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0935</a></td>
+                        <td><a href="#modal8" class="trigger-btn" data-toggle="modal">CF-0935</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-20-2019</td>
@@ -226,7 +182,17 @@
                         <td>OFF</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0936</a></td>
+                        <td><a href="#modal9" class="trigger-btn" data-toggle="modal">CF-0936</a></td>
+                        <td>12873</td>
+                        <td>Clinic F</td>
+                        <td data-dateformat="MM-DD-YYYY">04-25-2019</td>
+                        <td>Failure</td>
+                        <td>LG</td>
+                        <td>4</td>
+                        <td>ON</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#modal10" class="trigger-btn" data-toggle="modal">CF-0937</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-25-2019</td>
@@ -236,7 +202,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">CF-0937</a></td>
+                        <td><a href="#modal11" class="trigger-btn" data-toggle="modal">CF-0938</a></td>
                         <td>12873</td>
                         <td>Clinic F</td>
                         <td data-dateformat="MM-DD-YYYY">04-26-2019</td>
@@ -246,7 +212,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1024</a></td>
+                        <td><a href="#modal12" class="trigger-btn" data-toggle="modal">AC-1024</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-05-2019</td>
@@ -256,7 +222,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1025</a></td>
+                        <td><a href="#modal13" class="trigger-btn" data-toggle="modal">AC-1025</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-07-2019</td>
@@ -266,7 +232,7 @@
                         <td>OFF</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1026</a></td>
+                        <td><a href="#modal14" class="trigger-btn" data-toggle="modal">AC-1026</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-13-2019</td>
@@ -276,7 +242,7 @@
                         <td>OFF</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1027</a></td>
+                        <td><a href="#modal15" class="trigger-btn" data-toggle="modal">AC-1027</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-14-2019</td>
@@ -286,7 +252,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1028</a></td>
+                        <td><a href="#modal16" class="trigger-btn" data-toggle="modal">AC-1028</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-20-2019</td>
@@ -296,7 +262,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1029</a></td>
+                        <td><a href="#modal17" class="trigger-btn" data-toggle="modal">AC-1029</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-20-2019</td>
@@ -306,7 +272,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1030</a></td>
+                        <td><a href="#modal18" class="trigger-btn" data-toggle="modal">AC-1030</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-22-2019</td>
@@ -316,7 +282,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1031</a></td>
+                        <td><a href="#modal19" class="trigger-btn" data-toggle="modal">AC-1031</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-25-2019</td>
@@ -326,7 +292,7 @@
                         <td>OFF</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1032</a></td>
+                        <td><a href="#modal20" class="trigger-btn" data-toggle="modal">AC-1032</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-26-2019</td>
@@ -336,7 +302,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1033</a></td>
+                        <td><a href="#modal21" class="trigger-btn" data-toggle="modal">AC-1033</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-29-2019</td>
@@ -346,7 +312,7 @@
                         <td>ON</td>
                     </tr>
                     <tr>
-                        <td><a href="/Admin/ArmstrongClinicReport">AC-1034</a></td>
+                        <td><a href="#modal22" class="trigger-btn" data-toggle="modal">AC-1034</a></td>
                         <td>24678</td>
                         <td>Armstrong Clinic</td>
                         <td data-dateformat="MM-DD-YYYY">04-30-2019</td>
@@ -360,13 +326,821 @@
         </div>
     </div>
 
-    <div class="container">
-        <div id="chartContainer1" style="height: 300px; width: 100%"></div>
-        
+    <!-- Modal -->
+    <div class="modal fade" id="modal1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
 
+                        <div class="row">Photo ID: CF-0928</div>
+                        <div class="row">Date Uploaded: 04-01-2019</div>
+                        <div class="row">Time: 10:10 AM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: Samsung</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <div class="modal fade" id="modal2" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0929</div>
+                        <div class="row">Date Uploaded: 04-01-2019</div>
+                        <div class="row">Time: 7:10 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: LG</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0930</div>
+                        <div class="row">Date Uploaded: 04-03-2019</div>
+                        <div class="row">Time: 7:30 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: HTC</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: OFF</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal4" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0931</div>
+                        <div class="row">Date Uploaded: 04-04-2019</div>
+                        <div class="row">Time: 10:10 AM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: Motorola</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal5" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0932</div>
+                        <div class="row">Date Uploaded: 04-10-2019</div>
+                        <div class="row">Time: 06:10 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: Samsung</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: OFF</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal6" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0933</div>
+                        <div class="row">Date Uploaded: 04-15-2019</div>
+                        <div class="row">Time: 08:10 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: HTC</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal7" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0934</div>
+                        <div class="row">Date Uploaded: 04-20-2019</div>
+                        <div class="row">Time: 10:10 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: LG</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal8" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0935</div>
+                        <div class="row">Date Uploaded: 04-20-2019</div>
+                        <div class="row">Time: 08:30 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: Samsung</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: OFF</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal9" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0936</div>
+                        <div class="row">Date Uploaded: 04-25-2019</div>
+                        <div class="row">Time: 07:45 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: LG</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal10" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0937</div>
+                        <div class="row">Date Uploaded: 04-25-2019</div>
+                        <div class="row">Time: 09:45 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: Samsung</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal11" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: CF-0938</div>
+                        <div class="row">Date Uploaded: 04-26-2019</div>
+                        <div class="row">Time: 06:15 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: Samsung</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal12" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1024</div>
+                        <div class="row">Date Uploaded: 04-05-2019</div>
+                        <div class="row">Time: 10:35 AM</div>
+                        <div class="row">Status: Success</div>
+                        <div class="row">Device: LG</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal13" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1025</div>
+                        <div class="row">Date Uploaded: 04-07-2019</div>
+                        <div class="row">Time: 03:15 PM</div>
+                        <div class="row">Status: Success</div>
+                        <div class="row">Device: HTC</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: OFF</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal14" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1026</div>
+                        <div class="row">Date Uploaded: 04-13-2019</div>
+                        <div class="row">Time: 04:10 PM</div>
+                        <div class="row">Status: Success</div>
+                        <div class="row">Device: Motorola</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: OFF</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal15" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1027</div>
+                        <div class="row">Date Uploaded: 04-14-2019</div>
+                        <div class="row">Time: 08:20 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: LG</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal16" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1028</div>
+                        <div class="row">Date Uploaded: 04-20-2019</div>
+                        <div class="row">Time: 07:15 PM</div>
+                        <div class="row">Status: Success</div>
+                        <div class="row">Device: Motorola</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal17" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1029</div>
+                        <div class="row">Date Uploaded: 04-20-2019</div>
+                        <div class="row">Time: 06:40 PM</div>
+                        <div class="row">Status: Success</div>
+                        <div class="row">Device: HTC</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal18" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1030</div>
+                        <div class="row">Date Uploaded: 04-22-2019</div>
+                        <div class="row">Time: 11:10 PM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: LG</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal19" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1031</div>
+                        <div class="row">Date Uploaded: 04-25-2019</div>
+                        <div class="row">Time: 10:35 AM</div>
+                        <div class="row">Status: Failure</div>
+                        <div class="row">Device: HTC</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: OFF</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal20" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1032</div>
+                        <div class="row">Date Uploaded: 04-26-2019</div>
+                        <div class="row">Time: 09:20 PM</div>
+                        <div class="row">Status: Success</div>
+                        <div class="row">Device: HTC</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal21" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1033</div>
+                        <div class="row">Date Uploaded: 04-29-2019</div>
+                        <div class="row">Time: 05:15 PM</div>
+                        <div class="row">Status: Success</div>
+                        <div class="row">Device: LG</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal22" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Photo Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="~/Content/img/TestStrip.jpg" />
+                            </div>
+                        </div>
+                        <div class="row"><h1></h1></div>
+                        <div class="row"><h1></h1></div>
+
+                        <div class="row">Photo ID: AC-1034</div>
+                        <div class="row">Date Uploaded: 04-30-2019</div>
+                        <div class="row">Time: 03:15 PM</div>
+                        <div class="row">Status: Success</div>
+                        <div class="row">Device: Samsung</div>
+                        <div class="row">OS: 4</div>
+                        <div class="row">Flash Light: ON</div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                    <a href="~/Content/img/TestStrip.jpg" download class="btn btn-success" role="button">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="https://www.jqueryscript.net/demo/jQuery-Plugin-For-Sortable-Bootstrap-Tables-Bootstrap-Sortable/Scripts/bootstrap-sortable.js"></script>
 </body>

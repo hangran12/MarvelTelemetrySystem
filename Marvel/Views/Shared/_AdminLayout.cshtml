@@ -6,7 +6,6 @@
     <title>@ViewBag.Title - Marvel-ous</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
@@ -33,16 +32,16 @@
             <div class="col-2 collapse d-md-flex pt-2 h-100" id="sidebar">
                 <nav class="nav flex-column">
                     <center>
-                    <img src="~/Content/img/iconRe.png" alt="" height="80" width="80" />
-                    <a class="btn btn-outline-primary btn-sm btn" href="/Researcher/Dashboard" role="button">RESEARCHER</a>
+                        <img src="~/Content/img/iconRe.png" alt="" height="80" width="80" />
+                        <a class="btn btn-outline-primary btn-sm btn" href="/Researcher/Dashboard" role="button">RESEARCHER</a>
                     </center>
                     <a class="navbar-link active" href="~/Forms/ControlPanel"><span class="fa fa-home fa-3x ml-3"></span></a>
                     <li>@Html.ActionLink(" Dashboard", "Dashboard", "Admin", null, new { @class = "nav-link" })</button></li>
                     <li>@Html.ActionLink("Notifications", "Notifications", "Admin", null, new { @class = "nav-link" })</li>
                     <li>
-                        <center>
+                        
                             <div class="dropdown">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
                                     Tables
                                 </button>
                                 <div class="dropdown-menu">
@@ -50,7 +49,6 @@
                                     <a class="dropdown-item">@Html.ActionLink("Budget Report", "Budget", "Admin", null, new { @class = "nav-link" })</a>
                                 </div>
                             </div>
-                        </center>
                     </li>
                 </nav>
             </div>
