@@ -194,6 +194,7 @@
     <None Include="Properties\PublishProfiles\MarvelSystem - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\MarvelTelemetry - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\MarvelTelemetry - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\MarvelTelemetry - Web Deploy2.pubxml" />
     <None Include="Properties\PublishProfiles\MarveTelemetrySystem - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
