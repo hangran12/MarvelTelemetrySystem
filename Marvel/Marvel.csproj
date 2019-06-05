@@ -140,8 +140,10 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\About.jpg" />
     <Content Include="Content\img\Armstrong.PNG" />
     <Content Include="Content\img\ArmstrongSR.PNG" />
+    <Content Include="Content\img\baby.jpg" />
     <Content Include="Content\img\background.png" />
     <Content Include="Content\img\budget.PNG" />
     <Content Include="Content\img\ClinicF.PNG" />
